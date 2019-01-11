@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
     table.string("title")
     table.string("artist")
     table.string("URL")
-    table.integer("list_id").references(' ? ? ? ').unsigned().onDelete('cascade')
+    table.integer("list_id").references(' slo || med || fast ').unsigned().onDelete('cascade')
   })
 }
 
