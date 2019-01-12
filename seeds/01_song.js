@@ -15,7 +15,7 @@ exports.seed = function(knex, Promise) {
           id: 2,
           title: 'I Walk the Line',
           artist: 'Johnny Cash',
-          URL: 'http://song.com/i-ran'
+          URL: 'http://song.com/i-walk-the-line'
         },
         {
           id: 3,
@@ -33,13 +33,13 @@ exports.seed = function(knex, Promise) {
           id: 5,
           title: 'Born to Run',
           artist: 'Bruce Springsteen',
-          URL: 'http://song.com'
+          URL: 'http://song.com/born-to-run'
         },
         {
           id: 6,
           title: 'Too Fast for Love',
           artist: 'Bruce Springsteen',
-          URL: 'http://song.com'
+          URL: 'http://song.com/too-fast-for-love'
         }
       ])
     })

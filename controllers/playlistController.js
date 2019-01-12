@@ -17,10 +17,10 @@ const getOne = (req, res, next) => {
 const getByUser = (req, res, next) => {
   id = req.params.id
 
-  knex('playlist')
-  .join('users', 'users.id', 'playlist.users_id')
+  knex('users')
+  .join('playlist', 'users.id', 'playlist.users_id')
   .join('song', 'song.id', 'playlist.song_id')
-  .select('song.URL', 'slo', 'med', 'fast', )
+  .select('song.URL', 'slo', 'med', 'fast')
   .then(playlist => res.json({ playlist: playlist}))
 }
 

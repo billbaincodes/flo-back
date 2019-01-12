@@ -18,7 +18,7 @@ const addSong = (req, res, next) => {
   body = req.body
 
   knex('song')
-    .insert('body')
+    .insert(body)
     .returning('*')
     .then(addedSong => res.json({ addedSong: addedSong}))
 }
