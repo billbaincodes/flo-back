@@ -12,6 +12,11 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(morgan(process.env.NODE_ENV !== 'production' ? 'dev' : 'combined'))
 app.use(cors({origin: true, credentials: true})) // <= Disable if you don't need CORS
+
+//route imports
+const usersRoutes = require('./routes/usersRoutes.js')
+
+
 // TODO: Optional Static file handler:
 // app.use('/', express.static('./build'))
 
@@ -22,6 +27,7 @@ app.get('/', (req, res, next) =>{
   res.json("Template from Dan's Guides: https://github.com/justsml/guides/tree/master/express/setup-guide")
 })
 
+app.use('/user', userRoutes)
 
 // The following 2 `app.use`'s MUST follow ALL your routes/middleware
 app.use(notFound)
