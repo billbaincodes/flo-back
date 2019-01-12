@@ -21,7 +21,7 @@ const getByUser = (req, res, next) => {
   .join('playlist', 'users.id', 'playlist.users_id')
   .join('song', 'song.id', 'playlist.song_id')
   .select('song.URL', 'slo', 'med', 'fast')
-  .then(playlist => res.json(playlist))
+  .then(playlist => res.json({playlist: playlist}))
 }
 
 module.exports = {
