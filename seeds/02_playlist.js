@@ -1,7 +1,7 @@
 
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex.raw('DELETE FROM "playlist"; ALTER SEQUENCE playlist_id_seq RESTART WITH 4;')
+  return knex.raw('DELETE FROM "playlist"; ALTER SEQUENCE playlist_id_seq RESTART WITH 7;')
     .then(function () {
       // Inserts seed entries
       return knex('playlist').insert([
@@ -15,8 +15,8 @@ exports.seed = function(knex, Promise) {
         },
         {
           id: 2,
-          slo: false,
-          med: true,
+          slo: true,
+          med: false,
           fast: false,
           users_id: 1,
           song_id: 2
@@ -32,11 +32,27 @@ exports.seed = function(knex, Promise) {
         {
           id: 4,
           slo: false,
-          med: false,
-          fast: true,
+          med: true,
+          fast: false,
           users_id: 1,
           song_id: 4
         },
+        {
+          id: 5,
+          slo: false,
+          med: false,
+          fast: true,
+          users_id: 1,
+          song_id: 5
+        },
+        {
+          id: 6,
+          slo: false,
+          med: false,
+          fast: true,
+          users_id: 1,
+          song_id: 6
+        }
       ])
     })
 }

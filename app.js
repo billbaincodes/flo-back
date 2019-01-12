@@ -15,7 +15,8 @@ app.use(cors({origin: true, credentials: true})) // <= Disable if you don't need
 
 //route imports
 const usersRoutes = require('./routes/usersRoutes.js')
-
+const playlistRoutes = require('./routes/playlistRoutes.js')
+const songRoutes = require('./routes/songRoutes')
 
 // TODO: Optional Static file handler:
 // app.use('/', express.static('./build'))
@@ -27,7 +28,9 @@ app.get('/', (req, res, next) =>{
   res.json("Template from Dan's Guides: https://github.com/justsml/guides/tree/master/express/setup-guide")
 })
 
-app.use('/user', userRoutes)
+app.use('/users', usersRoutes)
+app.use('/playlist', playlistRoutes)
+app.use('/song', songRoutes)
 
 // The following 2 `app.use`'s MUST follow ALL your routes/middleware
 app.use(notFound)

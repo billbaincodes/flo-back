@@ -6,16 +6,16 @@ const getAll = (req, res, next) => {
   .then(users => res.json({ users : users }))
 }
 
-const updateUser = (req, res, next) => {
-  body = req.body
+const getOne = (req, res, next) => {
   id = req.params.id
 
   knex.select('*').from('users')
-  .then(users => res.json({users: users}))
-
+  .where("users.id", id)
+  .then(users => res.json({ users: users }))
 }
+
 
 module.exports = {
   getAll,
-  updateUser
-}
+  getOne
+} 
