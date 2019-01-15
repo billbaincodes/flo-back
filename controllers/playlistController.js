@@ -24,8 +24,18 @@ const getByUser = (req, res, next) => {
   .then(playlist => res.json({playlist: playlist}))
 }
 
+const addSongToList = (req, res, next) => {
+  body = req.body
+
+  knex('playlist')
+    .insert(body)
+    .returning('*')
+    .then(updatedList => res.json({ updatedList: updatedList[0]}))
+}
+
 module.exports = {
   getAll,
   getOne,
-  getByUser
+  getByUser,
+  addSongToList
 } 
