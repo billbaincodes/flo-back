@@ -33,9 +33,20 @@ const addSongToList = (req, res, next) => {
     .then(updatedList => res.json({ updatedList: updatedList[0]}))
 }
 
+const deleteSongFromList = (req, res, next) => {
+  id = req.params.id
+
+  knex.select('*').from('playlist')
+    .where("song_id", id)
+    .delete()
+    .returning('*')
+    .then(removedSong => res.json({ removedSong: removedSong}))
+}
+
 module.exports = {
   getAll,
   getOne,
   getByUser,
-  addSongToList
+  addSongToList,
+  deleteSongFromList
 } 
