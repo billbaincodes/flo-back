@@ -14,7 +14,7 @@ const getOne = (req, res, next) => {
     .select("*")
     .from("users")
     .where("users.id", id)
-    .then(users => res.json({ user: user[0] }));
+    .then(users => res.json({ users: users[0] }));
 };
 
 const newUser = (req, res, next) => {

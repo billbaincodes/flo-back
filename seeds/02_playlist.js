@@ -52,6 +52,30 @@ exports.seed = function(knex, Promise) {
           fast: true,
           users_id: 1,
           song_id: 6
+        },
+        {
+          id: 7,
+          slo: false,
+          med: false,
+          fast: true,
+          users_id: 1,
+          song_id: 7
+        },
+        {
+          id: 8,
+          slo: false,
+          med: false,
+          fast: true,
+          users_id: 1,
+          song_id: 8
+        },
+        {
+          id: 9,
+          slo: false,
+          med: false,
+          fast: true,
+          users_id: 1,
+          song_id: 9
         }
       ])
     })

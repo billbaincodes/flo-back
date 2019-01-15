@@ -7,8 +7,8 @@ exports.seed = function(knex, Promise) {
       return knex('song').insert([
         {
           id: 1,
-          title: 'Walk Like an Egyptian',
-          artist: 'The Bangles',
+          title: 'Hello',
+          artist: 'Lionel Richie',
           URL: 'http://song.com/walk-like-an-egyptian'
         },
         {
