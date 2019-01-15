@@ -13,14 +13,14 @@ exports.seed = function(knex, Promise) {
         },
         {
           id: 2,
-          title: 'I Walk the Line',
+          title: 'Only Time',
           artist: 'Johnny Cash',
           URL: 'http://song.com/i-walk-the-line'
         },
         {
           id: 3,
-          title: 'I Ran',
-          artist: 'A Flock of Seagulls',
+          title: 'Hallelujah',
+          artist: 'Leonard Cohen',
           URL: 'http://song.com/i-ran'
         },
         {
@@ -38,8 +38,26 @@ exports.seed = function(knex, Promise) {
         {
           id: 6,
           title: 'Too Fast for Love',
-          artist: 'Bruce Springsteen',
+          artist: 'Mötley Crüe',
           URL: 'http://song.com/too-fast-for-love'
+        },
+        {
+          id: 7,
+          title: 'Tornado of Souls',
+          artist: 'Megadeth',
+          URL: 'http://song.com/tornado-of-souls'
+        },
+        {
+          id: 8,
+          title: 'First of the Year',
+          artist: 'Skrillex',
+          URL: 'http://song.com/first-of-the-year'
+        },
+        {
+          id: 9,
+          title: 'Mouth for War',
+          artist: 'Pantera',
+          URL: 'http://song.com/mouth-for-war'
         }
       ])
     })
