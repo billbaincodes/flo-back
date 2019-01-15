@@ -14,7 +14,7 @@ const getOne = (req, res, next) => {
     .select("*")
     .from("users")
     .where("users.id", id)
-    .then(users => res.json({ users: users }));
+    .then(users => res.json({ user: user[0] }));
 };
 
 const newUser = (req, res, next) => {
@@ -23,7 +23,7 @@ const newUser = (req, res, next) => {
   knex("users")
     .insert(body)
     .returning("*")
-    .then(newUser => res.json({ newUser: newUser }));
+    .then(newUser => res.json({ newUser: newUser[0] }));
 };
 
 const deleteUser = (req, res, next) => {
@@ -34,7 +34,7 @@ const deleteUser = (req, res, next) => {
     .where("id", id)
     .delete()
     .returning("*")
-    .then(deletedUser => res.json({ deletedUser: deletedUser }));
+    .then(deletedUser => res.json({ deletedUser: deletedUser[0] }));
 };
 
 const updateUser = (req, res, next) => {

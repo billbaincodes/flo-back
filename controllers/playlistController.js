@@ -11,7 +11,7 @@ const getOne = (req, res, next) => {
 
   knex.select('*').from('playlist')
   .where("playlist.id", id)
-  .then(playlist => res.json({ playlist: playlist }))
+  .then(playlist => res.json({ playlist: playlist[0] }))
 }
 
 const getByUser = (req, res, next) => {

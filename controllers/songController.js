@@ -20,7 +20,7 @@ const addSong = (req, res, next) => {
   knex('song')
     .insert(body)
     .returning('*')
-    .then(addedSong => res.json({ addedSong: addedSong}))
+    .then(addedSong => res.json({ addedSong: addedSong[0]}))
 }
 
 const deleteSong = (req, res, next) => {
@@ -30,7 +30,7 @@ const deleteSong = (req, res, next) => {
     .where("id", id)
     .delete()
     .returning('*')
-    .then(deletedSong => res.json({ deletedSong: deletedSong}))
+    .then(deletedSong => res.json({ deletedSong: deletedSong[0]}))
 }
 
 module.exports = {
