@@ -9,19 +9,19 @@ exports.seed = function(knex, Promise) {
           id: 1,
           title: 'Hello',
           artist: 'Lionel Richie',
-          URL: 'http://song.com/walk-like-an-egyptian'
+          URL: 'http://song.com/hello'
         },
         {
           id: 2,
           title: 'Only Time',
           artist: 'Enya',
-          URL: 'http://song.com/i-walk-the-line'
+          URL: 'http://song.com/only-time'
         },
         {
           id: 3,
           title: 'Hallelujah',
-          artist: 'Leonard Cohen',
-          URL: 'http://song.com/i-ran'
+          artist: 'Jeff Buckley',
+          URL: 'http://song.com/hallelujah'
         },
         {
           id: 4,
