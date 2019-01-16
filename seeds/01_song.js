@@ -37,15 +37,15 @@ exports.seed = function(knex, Promise) {
         },
         {
           id: 6,
-          title: 'Too Fast for Love',
-          artist: 'Mötley Crüe',
-          URL: 'http://song.com/too-fast-for-love'
+          title: 'I Ran',
+          artist: 'A Flock of Seagulls',
+          URL: 'http://song.com/i-ran'
         },
         {
           id: 7,
-          title: 'Tornado of Souls',
-          artist: 'Megadeth',
-          URL: 'http://song.com/tornado-of-souls'
+          title: 'Master of Puppets',
+          artist: 'Metallica',
+          URL: 'http://song.com/master-of-puppets'
         },
         {
           id: 8,
@@ -55,9 +55,9 @@ exports.seed = function(knex, Promise) {
         },
         {
           id: 9,
-          title: 'Mouth for War',
-          artist: 'Pantera',
-          URL: 'http://song.com/mouth-for-war'
+          title: 'Tornado of Souls',
+          artist: 'Megadeth',
+          URL: 'http://song.com/tornado-of-souls'
         }
       ])
     })
