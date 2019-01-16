@@ -14,7 +14,7 @@ exports.seed = function(knex, Promise) {
         {
           id: 2,
           title: 'Only Time',
-          artist: 'Johnny Cash',
+          artist: 'Enya',
           URL: 'http://song.com/i-walk-the-line'
         },
         {

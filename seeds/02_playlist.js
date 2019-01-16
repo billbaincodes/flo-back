@@ -23,8 +23,8 @@ exports.seed = function(knex, Promise) {
         },
         {
           id: 3,
-          slo: false,
-          med: true,
+          slo: true,
+          med: false,
           fast: false,
           users_id: 1,
           song_id: 3
@@ -40,16 +40,16 @@ exports.seed = function(knex, Promise) {
         {
           id: 5,
           slo: false,
-          med: false,
-          fast: true,
+          med: true,
+          fast: false,
           users_id: 1,
           song_id: 5
         },
         {
           id: 6,
           slo: false,
-          med: false,
-          fast: true,
+          med: true,
+          fast: false,
           users_id: 1,
           song_id: 6
         },
