@@ -59,7 +59,7 @@ exports.seed = function(knex, Promise) {
           med: false,
           fast: true,
           users_id: 1,
-          song_id: 7
+          song_id: 9
         },
         {
           id: 8,
@@ -67,7 +67,7 @@ exports.seed = function(knex, Promise) {
           med: false,
           fast: true,
           users_id: 1,
-          song_id: 8
+          song_id: 7
         },
         {
           id: 9,
@@ -75,7 +75,7 @@ exports.seed = function(knex, Promise) {
           med: false,
           fast: true,
           users_id: 1,
-          song_id: 9
+          song_id: 8
         }
       ])
     })
